@@ -1,0 +1,35 @@
+#include <stdio.h>
+int main()
+{
+  int i,n;
+    struct store
+    {
+        char code[50];
+        char name[50];
+        int price;
+    } product[50];
+    struct product;
+    
+    printf("Enter NO of Products = \n");
+    scanf("%d", &n);
+    for (int i = 0; i < n; i++)
+    {
+        printf("Enter Product Code = \n");
+        scanf("%s", product[i].code);
+        printf("Enter Product name = \n");
+        scanf("%s", product[i].name);
+        printf("Enter Product Price = \n");
+        scanf("%d", &product[i].price);
+    }
+    for (int i = 0; i < n; i++)
+    {
+        printf("\n");
+        printf("%d Product detail\n", i+1);
+        printf("Product Code = %s\n", product[i].code);
+        printf("Product Name = %s\n", product[i].name);
+        printf("Product Price = %d Rs\n", product[i].price);
+        
+    }
+
+    return 0;
+}
